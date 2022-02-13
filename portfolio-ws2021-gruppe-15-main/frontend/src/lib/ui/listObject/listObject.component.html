@@ -1,0 +1,12 @@
+<div class = "listObject" (mouseenter)="hoverEvent()" (mouseleave)="mouseOutEvent()"
+  (click)="selectEvent()">
+  <input
+    #myInput
+    class ="inputName"
+    type="text"
+    value="{{reminderListRef.name}}"
+    (change)="editName($event)"
+  />
+  <output class="listCount" [value]="this.reminderListRef.reminders.length"></output>
+  <deleteButton *ngIf="showDelete" id="deleteButton" (newDeleteEvent)="deleteEvent()"></deleteButton>
+</div>

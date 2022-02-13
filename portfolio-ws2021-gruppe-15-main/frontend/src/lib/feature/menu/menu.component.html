@@ -1,0 +1,22 @@
+<div class = "menu">
+  <todayButton
+    (newTodayEvent)="selectToday()"
+  ></todayButton>
+  <flagButton
+    (newFlagEvent)="showFlagged()"
+  ></flagButton>
+    <ul>
+      <li *ngFor="let reminderList of boardObject.reminderLists">
+       <listObject
+          [reminderListRef]= "reminderList"
+          (deleteListObjEvent)="deleteEvent(reminderList.id)"
+          (selectListEvent)="selectEvent($event)"
+        ></listObject>
+     </li>
+   </ul>
+  <addListButton
+    (newListEvent)="newList()">
+  </addListButton>
+  <output class="dateconter" [value]="boardObject.todayCount"></output>
+  <output class="flagcounter" [value]="boardObject.flagCount"></output>
+</div>

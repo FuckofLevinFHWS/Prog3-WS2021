@@ -1,0 +1,24 @@
+<div class="reminder">
+  <input *ngIf="!this.reminderObject.inFlaggedList && !this.reminderObject.inTodayList"
+         type="checkbox"
+         (change)="markAsDone()"
+  >
+  <input
+    #reminderInput
+    class="inputText"
+    type="text"
+    value="{{reminderObject.text}}"
+    (change)="editText($event)"
+  />
+
+  <input
+    class="dateInput"
+    type="date"
+    value="{{reminderObject.date}}"
+    (change)="editDate($event)"
+  />
+
+  <img *ngIf="!this.reminderObject.flagged" class="flagButton" src="assets\whiteFlag.png" (click)="editFlag()">
+  <img *ngIf="this.reminderObject.flagged" class="flagButton" src="assets\blackFlag.png" (click)="editFlag()">
+
+</div>

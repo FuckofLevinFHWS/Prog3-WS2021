@@ -1,0 +1,66 @@
+.list {
+  position: relative;
+  background-color: rgb(25, 81, 165);
+  top: 3.5%;
+  left: 520px;
+  width: 720px;
+  height: 8%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.5em;
+  display: inline-block;
+  text-align: left;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+.list:hover {
+  background-color: rgb(77, 74, 74);
+}
+
+.list ul{
+  top: 100%;
+  position: absolute;
+  width: calc(100% - 20px);
+  height: 570%;
+  overflow-y: auto;
+}
+
+.list ul li{
+  list-style: none;
+}
+
+.list output{
+  color: white;
+  position: absolute;
+  background: none;
+  border: transparent;
+  font-size: 2em;
+
+}
+
+.list .header{
+  height: 60px;
+}
+
+.list .header .listname{
+  width: 500px;
+  color: white;
+  background: none;
+  font-family: Arial, Helvetica, sans-serif;
+  resize: none;
+  border: transparent;
+  font-size: 2.5em;
+}
+
+.list .header .remindercount{
+  margin-left: 60px;
+}
+
+.list .header deleteButton{
+  margin-left: 100px;
+  top: 10px;
+  position: absolute;
+  vertical-align: middle;
+}
+

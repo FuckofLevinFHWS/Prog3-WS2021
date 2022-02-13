@@ -1,0 +1,19 @@
+<div class="board">
+  <menu
+    [boardObject]="this.boardObject"
+    (selectListEvent)="selectList($event)"
+    (deleteListObjEvent)="deleteList($event)"
+    (showFlaggedEvent)="showFlagged()"
+    (showTodayEvent)="showToday()"
+    (newListEvent)="createNewList()"
+  ></menu>
+  <list [reminderListObject]="this.listObject"
+        (deleteListEvent)="deleteList($event)"
+        (deleteListEvent)="this.listObject = replaceList()"
+        (dateCountListEvent)="this.boardObject.todayCount = this.boardObject.todayCount + $event"
+        (flagCountListEvent)="this.boardObject.flagCount = this.boardObject.flagCount + $event">
+  </list>
+  <addReminderButton *ngIf="!this.extraHere"
+    (newReminderEvent)="addReminder(listObject)">
+  </addReminderButton>
+</div>

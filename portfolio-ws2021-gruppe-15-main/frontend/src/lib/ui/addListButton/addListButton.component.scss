@@ -1,0 +1,25 @@
+.addListButton {
+  position: relative;
+  background-color: #104657;
+  top: 88%;
+  width: 200%;
+  height: 6%;
+  right: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.45em;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.addListButton icon {
+  position: relative;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.addListButton:hover {
+  background-color: rgb(77, 74, 74);
+}

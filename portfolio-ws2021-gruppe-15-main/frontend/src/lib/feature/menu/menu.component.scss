@@ -1,0 +1,46 @@
+.menu {
+  background-color: rgb(48, 181, 199);
+  top: 13.5%;
+  position: fixed;
+  display: flex;
+  width: 25%;
+  height: 70%;
+  border-radius: 20px;
+}
+
+.menu ul{
+  position: absolute;
+  width: 90%;
+  right: 5%;
+  height: 65%;
+  top: 15%;
+  overflow: auto;
+}
+
+.menu ul li{
+  list-style: none;
+  margin-bottom: 10px;
+}
+.menu .dateconter{
+  background: gray;
+  width: 4%;
+  height: 3%;
+  margin-left: 5%;
+  margin-top: 8%;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+.menu .flagcounter{
+  background: gray;
+  width: 4%;
+  height: 3%;
+  margin-left: 35%;
+  margin-top: 8%;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+

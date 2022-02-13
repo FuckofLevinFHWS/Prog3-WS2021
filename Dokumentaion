@@ -1,0 +1,111 @@
+28.12.2021:
+	- Initialisierung der SQL Tabellen
+	- SQL Fehlerhandler implementiert
+	- Models für Reminder und Reminder List implementiert
+	- SQL Tabelle Remider geändert, ID und fermdschlüssel zusammen unique, dient dafür das 			id klein bleibt bei vielen listen und Remindern
+	- Board Model hinzugefügt
+	
+	allgemein ToDo: ALlgemein Endpunkte hinzufügen, JSON Parser einrichten, Endpunkte genau 					implementieren
+	nächster ToDo: Allgemein Endpunkte hinzufügen, Datenbank testen
+	
+02.01.2022:
+	- Datenbanktest
+		-Ergebnis: Unique unnötig (funktioniert nicht wird gelöscht), autoincrement 	
+		füllt keine Lücke, Lücken im Primary key die entstehen werden
+		vorraussichtlich nicht gefüllt werden können, ansonsten Verhalten 		
+		wie erwartet
+	- Endpunkte noch nich möglich zu machen, erst Datenbank Zugriff fertig 
+	- Benötigte Datenbankabfragen: //getReminderLists, //getReminders, getBoard(gibt alles
+					zurück), ?getReminderList, ?getReminder, //postReminder, 						
+					//postReminderList, //putReminder, //putReminderList,
+					//deleteReminder, //deleteReminders, //deleteReminderLists
+	
+	allgemein ToDo: Datenbankzugriffe erstellen ,JSON Parser einrichten, ALlgemein
+				Endpunkte hinzufügen, Endpunkte genau implementieren
+	nächster ToDo: Datenbankzugriffe erstellen
+	
+03.01.2022:
+	- Datenbankabfragen weitergemacht (Liste siehe 02.01.2022)
+		- Genau: PutBefehle, 
+	- getReminder und getReminderList wahrscheinlich unnötig
+	- Nur noch get Board muss implementiert werden
+	
+	allgemein ToDo: Datenbankzugriffe weiter machen ,JSON Parser einrichten, ALlgemein
+				Endpunkte hinzufügen, Endpunkte genau implementieren
+	nächster ToDo: Datenbankzugriffe weiter machen
+	
+07.01.2022:
+	- get Board implementiert, Datenbankzugriff fertig
+	- getJsonValueFromModel implementiert
+	- convertToApiString(Board) implementiert
+	- convertToApiString(ReminderList/ReminderLists) hinzugefügt
+	- convertToApiString(Reminder/Reminders) hinzugefügt
+	- isValidReminderList und isValidReminder hinzugefügt
+	- convertReminderToModel und convertReminderListToModel hinzugefügt
+	- JSON Parser ist fertig
+	
+	allgemein ToDo: Manager schreiben, Allgemein Endpunkte hinzufügen, Endpunkte genau 				
+		implementieren, Vererbung von den IF.hpp
+	nächster ToDo: Manager schreiben
+	
+13.01.2022:
+	- Bug Fix
+		- Neuer Namespace für Models: Reminder::Core::Models
+		- Reminder und ReminderList ind Memory und MemoryList umbenannt (Probleme mit 
+			Namespace)
+		- Variablen überall angepasst
+	- Interfaces ParserIF und RepositoryIF erstellt und includes dahin verlagert
+	- getBoard(), postMemoryList(), putMemoryList(), deleteMemoryList(), getMemoryLists() 
+		erstellt
+	- postMemory(), putMemory(), getFlaggedMemories(), getMemories() erstellt
+	- SQL Repository: getFalggedMemories() hinzugefügt
+	
+	allgemein ToDo: Allgemein Endpunkte hinzufügen, Endpunkte genau implementieren
+	nächster ToDo: Allgemein Endpunkte hinzufügen, Mit Lukas abklären wegen abfragen
+	
+14.01.2021:
+	- Endpunkte: Board(), PostMemoryList(), PutMemoryList(), DeleteMemoryLists()
+	- Endpunkte: PostMemory(), GetMemories() vlt ein Fehler, PutMemory(), 
+			DeleteMemory()
+	
+	allgemein ToDo: Testen
+	nächster ToDo: Testen
+
+15.01.2021:
+	- GetFlagged() Methoden gelöscht (unnötig, Filterung im Front End)
+	- getestet, Tests:
+		- getBoard() ohne MemoryLists +
+		- postMemoryList() +
+		- putMemoryList() +
+		- deleteMemoryList() ohne Memories +
+		- getBoard mit einer MemoryList +
+		- getBoard() mit mehreren MemoryLists +
+		- postMemory() +
+		- putMemory() +
+		- deleteMemory() +
+		- deleteMemoryList() mit mehreren MemoryLists +
+
+	- Änderungen bei dem Post und Put der Memories
+	- neugetestet, Test:
+		- postMemory() + //Möglich wenn es Fremdschlüsel nicht gibt
+		- getMemories() +
+		- putMemoryList() +
+		- deleteMemory() +
+		- DeleteMemoryList() mit einer Memory +
+		- postMemoryList() +
+		- getBoard() mit mehreren MemoryLists +
+		- putMemoryLists() + //Funktioniert auch beim Updaten wenn es keine gibt
+		- deleteMemoryLists() +
+		- deleteMemoryLists() mit mehreren Memories +
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

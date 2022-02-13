@@ -1,0 +1,21 @@
+.todayButton {
+  position: relative;
+  top: 5%;
+  width: 300%;
+  height: 7%;
+  left: 200%;
+  align-items: center;
+  background-color: #104657;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.todayButton img {
+  width: 40px;
+  height: 40px;
+}
+
+.todayButton:hover {
+  background-color: rgb(77, 74, 74);
+}
+

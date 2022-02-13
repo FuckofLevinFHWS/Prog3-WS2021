@@ -1,0 +1,21 @@
+<div class = "list">
+  <div class="header" (mouseenter)="hoverEvent()" (mouseleave)="mouseOutEvent()">
+    <textarea class = "listname" [value]="reminderListObject.name" readonly disabled></textarea>
+    <output class="remindercount" [value]="reminderListObject.reminders.length"></output>
+    <deleteButton *ngIf="showTrash" id="deleteButton" (newDeleteEvent)="deleteList()"></deleteButton>
+  </div>
+
+  <div class="body">
+    <ul>
+      <li *ngFor="let reminder of reminderListObject.reminders">
+        <reminder
+          [reminderObject]="reminder"
+          (clickDeleteEvent)="deleteReminder($event)"
+          (flagCountEvent)="flagCountChange($event)"
+          (dateCountEvent)="dateCountChange($event)"
+          (changeEvent)="reminderChange($event)">
+        </reminder>
+      </li>
+    </ul>
+  </div>
+</div>
